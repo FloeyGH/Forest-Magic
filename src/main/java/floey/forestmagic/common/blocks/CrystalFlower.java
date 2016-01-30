@@ -21,7 +21,7 @@ public class CrystalFlower extends BlockFlower
         super(0);
         this.setStepSound(soundTypeGrass);
         this.setBlockName("CrystalFlower");
-        this.setCreativeTab(CreativeTabs.tabFood);
+        this.setCreativeTab(ForestMagicObjs.ForestTab);
         if (FMLCommonHandler.instance().getEffectiveSide() == Side.CLIENT)
         {
             ObfuscationReflectionHelper.setPrivateValue(BlockFlower.class, this, new IIcon[1], "field_149861_N");

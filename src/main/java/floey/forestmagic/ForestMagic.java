@@ -5,7 +5,9 @@ import cpw.mods.fml.common.SidedProxy;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
+import cpw.mods.fml.common.registry.GameRegistry;
 import floey.forestmagic.common.ForestMagicObjs;
+import floey.forestmagic.common.world.WorldGenCrystalFlower;
 
 @Mod(name = ForestMagic.NAME, modid = ForestMagic.MODID, version = ForestMagic.VERSION)
 public class ForestMagic {
@@ -28,7 +30,7 @@ public class ForestMagic {
 
     @Mod.EventHandler
     public void load(FMLInitializationEvent event) {
-
+        GameRegistry.registerWorldGenerator(new WorldGenCrystalFlower(), 0);
     }
 
     @Mod.EventHandler
